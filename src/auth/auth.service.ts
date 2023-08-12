@@ -4,6 +4,7 @@ import { Injectable } from "@nestjs/common";
 //Aqui, na classe AuthService, eu já estou criando os métodos de login e criação de conta, que serão necessários mais pra frente.
 @Injectable({})
 export class AuthService{
+    
     login() {
 
     }
