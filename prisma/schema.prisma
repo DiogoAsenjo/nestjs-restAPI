@@ -10,6 +10,7 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+//Aqui estamos criando os modelos com as propriedades que cada User e cada Bookmark terão durante a aplicação.
 model User {
   id        Int      @id @default(autoincrement())
   createdAt DateTime @default(now())
