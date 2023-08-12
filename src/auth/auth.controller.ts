@@ -9,11 +9,11 @@ export class AuthController{
     //Aqui eu estou criando as rotas da aplicação, é simples desse jeito, diferente de outros frameworks, eu nem preciso colocar qual o tipo do que está sendo retornado. Acontece que, a ideia aqui é deixar o controller fazendo apenas o gerenciamento das rotas, toda lógica com as regras de negócio ficará a critério do provider (auth.services.ts).
     @Post('login')
     login() {
-        return this.authService.login()
+        return this.authService.login();
     }
 
     @Post('signup')
     signUp() {
-        return this.authService.signup()
+        return this.authService.signup();
     }
 }
