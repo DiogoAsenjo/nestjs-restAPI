@@ -22,7 +22,9 @@ export class AuthService{
                 email: dto.email,
                 hash,
             }
-        })
+        });
+
+        delete user.hash;
         //Retornando o usuário salvo
         return user;
     }
