@@ -1,6 +1,7 @@
 //Controllers are responsible for handling incoming requests and returning responses to the client.
-import { Body, Controller, Post } from "@nestjs/common";
+import { Body, Controller, Post} from "@nestjs/common";
 import { AuthService } from "./auth.service";
+import { AuthDto } from "./dto";
 
 @Controller('auth')
 export class AuthController{
@@ -13,10 +14,7 @@ export class AuthController{
     }
 
     @Post('signup')
-    signUp(@Body() dto: any) {
-        console.log({
-            dto,
-        })
+    signUp(@Body() dto: AuthDto) { //Aqui estou pegando o body da requisição para fazer a validação.
         return this.authService.signup();
     }
 }
