@@ -15,6 +15,6 @@ export class AuthController{
 
     @Post('signup')
     signUp(@Body() dto: AuthDto) { //Aqui estou pegando o body da requisição para fazer a validação.
-        return this.authService.signup();
+        return this.authService.signup(dto);
     }
 }
